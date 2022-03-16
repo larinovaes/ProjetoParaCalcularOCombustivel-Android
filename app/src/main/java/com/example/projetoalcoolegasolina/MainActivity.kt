@@ -2,12 +2,20 @@ package com.example.projetoalcoolegasolina
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Button
 import android.widget.EditText
+import android.widget.Toast
 
 class MainActivity : AppCompatActivity(R.layout.activity_main) {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        title = "Calculadora de combustivel"
+
+        val button = findViewById<Button>(R.id.button)
+        button.setOnClickListener {
+            Toast.makeText(this, calculoDeGasolinaEAlcool(), Toast.LENGTH_SHORT).show()
+        }
     }
 
     private fun calculoDeGasolinaEAlcool(): String {
@@ -23,4 +31,8 @@ class MainActivity : AppCompatActivity(R.layout.activity_main) {
             "Alcool é melhor"
         }
     }
+
 }
+
+
+
