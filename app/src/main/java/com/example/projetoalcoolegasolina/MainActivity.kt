@@ -25,6 +25,13 @@ class MainActivity : AppCompatActivity(R.layout.activity_main) {
         val melhorCombustivel = gasolina.text.toString().toDouble() * 0.70
         val converterAlcool = alcool.text.toString().toDouble()
 
+        return MensagemParaMostrarQualMelhor(melhorCombustivel, converterAlcool)
+    }
+
+    private fun MensagemParaMostrarQualMelhor(
+        melhorCombustivel: Double,
+        converterAlcool: Double
+    ): String {
         return if (melhorCombustivel < converterAlcool) {
             "Gasolina é melhor"
         } else {
