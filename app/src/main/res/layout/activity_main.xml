@@ -17,4 +17,15 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
 
+    <EditText
+        android:id="@+id/activity_alcool"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Alcool"
+        android:layout_margin="16dp"
+        android:inputType="numberDecimal"
+        app:layout_constraintTop_toBottomOf="@id/activity_gasolina"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/activity_gasolina"/>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
